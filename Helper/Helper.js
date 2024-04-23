@@ -33,5 +33,5 @@ module.exports = {
     hashedpassword,
     generatetoken,
     comparepassword,
-    translatechatmsg
+    translatechatmsg,
 }

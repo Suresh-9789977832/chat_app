@@ -4,6 +4,6 @@ const { getotherusers } = require("../Contorller/usercontroller")
 
  const router = express.Router()
 
-router.get('/:token',protectRoute, getotherusers)
+router.get('/:token',protectRoute, getotherusers),
 
 module.exports=router

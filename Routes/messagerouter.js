@@ -7,7 +7,7 @@ const protectRoute = require("../Middleware/ProtectRoute")
 
 router.post('/send/:id/:token', protectRoute, sendMessage)
 
-router.get('/get/:id/:token', protectRoute, getMessages)
+router.get('/get/:id/:token', protectRoute, getMessages),
 
 router.post('/changelanguage/:token', protectRoute,changelanguage)
 

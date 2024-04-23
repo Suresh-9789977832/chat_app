@@ -11,7 +11,7 @@ router.post("/login", Loginuser)
 
 router.post("/signup", Signupuser)
 
-router.post("/logout", Logout)
+router.post("/logout", Logout),
 
 router.post('/upload', upload.single('file'),uploadfile )
 

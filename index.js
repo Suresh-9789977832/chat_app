@@ -34,7 +34,7 @@ app.use('/api/users',userRouter)
 
 
 server.listen(PORT, () => {
-    connectToMongodb()
+    connectToMongodb(),
     console.log(`server running on ${PORT}`)
 })
 

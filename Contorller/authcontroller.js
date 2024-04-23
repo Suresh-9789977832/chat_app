@@ -33,7 +33,7 @@ const Signupuser  = async(req,res) => {
         let finaldata = await Usermodal.create({ fullname, username, password, imageurl })
         res.status(201).send({
             message: "User created",
-            finaldata
+            finaldata,
         })
 
     } catch (error) {

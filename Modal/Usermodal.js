@@ -17,7 +17,7 @@ const Userschema = new mongoose.Schema({
     },
     imageurl: {
         type: String,
-        required:true
+        required:true,
     }
 
 },{ timestamps: true })

@@ -48,5 +48,5 @@ module.exports = {
     app,
     server,
     getReceiverSocketId,
-    getsendSocketId
+    getsendSocketId,
 }
