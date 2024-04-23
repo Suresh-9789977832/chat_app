@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import { useContext } from 'react'
 import Searchinput from './Searchinput'
 import Conversations from './Conversations'
 import Logoutbutton from './Logoutbutton'

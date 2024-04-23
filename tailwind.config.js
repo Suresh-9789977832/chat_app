@@ -10,7 +10,7 @@ export default {
         "tablet": "769px",
         "mbig": "426px",
         "mmedi": "376px",
-        "msmall":"321px"
+        "msmall":"321px",
       }
     },
   },

@@ -1,6 +1,6 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import { Authcontext } from "./Authcontext";
-import { io } from "socket.io-client";
+import { io } from "socket.io-client"
 
 export const Socketcontext = createContext()
 
@@ -12,7 +12,7 @@ export const Socketcontextprovider = ({ children }) => {
 
     useEffect(() => {
         if (authuser) {
-            const socket = io("http://localhost:4000", {
+            const socket = io("http://localhost:3000", {
                 query: {
                     userId:authuser.id
                 }

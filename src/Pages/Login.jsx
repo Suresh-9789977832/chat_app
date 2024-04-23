@@ -3,7 +3,7 @@ import React, { useContext, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { env } from '../Components/env'
 import toast from 'react-hot-toast'
-import { Authcontext } from '../Context/Authcontext'
+import { Authcontext } from '../Context/Authcontext';
 
 function Login() {
   

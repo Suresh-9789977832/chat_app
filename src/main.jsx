@@ -4,7 +4,7 @@ import App from './App.jsx'
 import './index.css'
 import { BrowserRouter } from 'react-router-dom'
 import { AuthContextProvider } from './Context/Authcontext.jsx'
-import { Socketcontextprovider } from './Context/Socketcontext.jsx'
+import { Socketcontextprovider } from './Context/Socketcontext.jsx';
 
 
 

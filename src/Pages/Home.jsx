@@ -1,6 +1,6 @@
 import React from 'react'
 import Sidebar from '../Components/Sidebar'
-import MessageContainer from '../Components/Messages/MessageContainer'
+import MessageContainer from '../Components/Messages/MessageContainer';
 
 function Home() {
     return <>

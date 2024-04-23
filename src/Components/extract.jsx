@@ -1,8 +1,8 @@
 export function extract(data) {
     const date = new Date(data)
-    const hours = padzero(date.getHours())
+    const hour = padzero(date.getHours())
     const minutes = padzero(date.getMinutes())
-    return `${hours}:${minutes}`
+    return `${hour}:${minutes}`
 }
 
 function padzero(value) {

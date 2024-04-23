@@ -31,9 +31,7 @@
 
 }
 
-/* ::-webkit-scrollbar{
-  width: 4px;
-} */
+
 
 ::-webkit-scrollbar-thumb{
   background: gray;
