@@ -41,12 +41,19 @@ function Singup() {
   }
 
 
-  let  handlefilechange =async(e)=> {
-    const file = e.target.files[0]
+  let handlefilechange = async (e) => {
+    try {
+      const file = e.target.files[0]
     const data = new FormData()
     data.append("file", file)
     let res = await axios.post(`${env.BASE_URL}/api/auth/upload`, data, { headers: { "Content-Type": "multipart/form-data" } })
     setimageurl(res.data)
+    } catch (error) {
+      if (error?.response?.status == 500) {
+        console.log(error)
+    }
+    }
+    
   }
 
   
@@ -92,7 +99,7 @@ function Singup() {
           <label className='label p-2 text-red-500'>
             <span className='text-base label-text'>Select Profile Picture</span>
           </label>
-          <input type='file' placeholder='Enter password' className='w-full input input-bordered h-10 p-1' multiple onChange={handlefilechange}/>
+          <input type='file'  className='w-full input input-bordered h-10 p-1' multiple onChange={handlefilechange}/>
           </div>
 
 

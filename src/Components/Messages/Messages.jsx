@@ -21,6 +21,7 @@ function Messages() {
         }, 100);
     }, [messages])
 
+    console.log(messages)
 
 
     useEffect(() => {
