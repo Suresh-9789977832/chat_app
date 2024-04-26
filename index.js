@@ -9,7 +9,7 @@ const connectToMongodb = require("./Db/ConnectMongodb")
 const cors = require("cors")
 const { app, server } = require("./Socket/Socket")
 
-const PORT = process.env.PORT || 6000
+const PORT = process.env.PORT || 8000
 
 
 
