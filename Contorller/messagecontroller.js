@@ -1,7 +1,7 @@
 const { translatechatmsg } = require("../Helper/Helper")
 const Conversationmodal = require("../Modal/Conversationmodal")
 const Messagemodal = require("../Modal/Messagemodal")
-const { getReceiverSocketId, io, getsendSocketId } = require("../Socket/Socket")
+const { getReceiverSocketId, io, getsendSocketId} = require("../Socket/Socket")
 
 const sendMessage = async(req,res) => {
     try {
@@ -36,12 +36,12 @@ const sendMessage = async(req,res) => {
             io.to(receiver).emit("newMessage",newMessage)
         }
 
-        const sender= getsendSocketId(senderId)
+        const sender = getsendSocketId(senderId)
         if (sender) {
-            io.to(sender).emit("newsendmsg",newMessage)
+            io.to(sender).emit("newMessage",newMessage)
         }
 
-        res.status(201).json(newMessage)
+        res.status(201).json(newMessage)    
 
     } catch (error) {
         res.status(500).send({

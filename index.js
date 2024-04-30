@@ -17,7 +17,7 @@ app.use('/uploads', express.static(__dirname + '/uploads'))
 app.use(express.json())
 app.use(cookie_parser())
 app.use( cors({
-    origin: "http://localhost:5000",
+    origin: "http://localhost:5173",
     credentials:true
 }))
 
