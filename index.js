@@ -1,6 +1,7 @@
 const express = require("express")
 const dotenv = require("dotenv")
 dotenv.config()
+const path=require("path")
 const cookie_parser=require("cookie-parser")
 const authrouter=require("./Routes/authrouter")
 const messagerouter = require("./Routes/messagerouter")
@@ -11,7 +12,7 @@ const { app, server } = require("./Socket/Socket")
 
 const PORT = process.env.PORT || 6000
 
-
+const __dirname=path.resolve()
 
 app.use('/uploads', express.static(__dirname + '/uploads'))
 app.use(express.json())
@@ -25,12 +26,12 @@ app.use( cors({
 app.use('/api/auth', authrouter)
 app.use('/api/message', messagerouter)
 app.use('/api/users',userRouter)
+app.use(express.static(path.join(__dirname,"/frontend/dist")))
 
 
-
-// app.get('/', (req, res) => {
-//     res.send("helo welcome to the world of chit chat")
-// })
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname,"frontend","dist","index.html"))
+})
 
 
 server.listen(PORT, () => {
