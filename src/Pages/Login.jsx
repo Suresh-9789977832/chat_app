@@ -12,7 +12,7 @@ function Login() {
   const [loading,setloading]=useState(false)
   const navigate=useNavigate()
 
-  const {setauthuser}=useContext(Authcontext)
+  const {setauthuser,setisLoggedIn}=useContext(Authcontext)
 
   const handlelogin = async (e) => {
     e.preventDefault()
@@ -26,6 +26,7 @@ function Login() {
         localStorage.setItem('value', JSON.stringify(res.data))
         setauthuser(res.data)
         navigate('/')
+        setisLoggedIn(true)
       }
     } catch (error) {
       console.log(error)

@@ -8,7 +8,11 @@ export const Socketcontextprovider = ({ children }) => {
 
     const [socket, setsocket] = useState(null)
     const [onlineUsers, setonlineUsers] = useState([])
-    const { authuser } = useContext(Authcontext)
+    const { authuser,setisLoggedIn,isLoggedIn } = useContext(Authcontext)
+
+
+    console.log(authuser)
+
 
     useEffect(() => {
         if (authuser) {
@@ -32,6 +36,8 @@ export const Socketcontextprovider = ({ children }) => {
     }
     }, [authuser])
 
+
+console.log(onlineUsers)
 
     return <Socketcontext.Provider value={{socket,onlineUsers}}>
         {children}

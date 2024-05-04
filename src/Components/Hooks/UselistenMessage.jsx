@@ -8,14 +8,15 @@ const UselistenMessage = () => {
     
 
     useEffect(() => {
+
         socket?.on("newMessage", (newMessage) => {
             setmessages([...messages,newMessage])
         })
-
-        socket?.on("newsendmsg", (newMessage) => {
-            setmessages([...messages,newMessage])
-        })
-
+     
+        // socket?.on("Message", (newMessage) => {
+        //     setmessages([...messages,newMessage])
+        // })
+     
 
         return ()=>socket.off("newMessage")
     },[socket,setmessages,messages])

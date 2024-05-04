@@ -10,12 +10,17 @@ export const AuthContextProvider = ({ children }) => {
     const [selectedConversation, setselectedConversation] = useState(null)
     const [messages, setmessages] = useState([])
     const [language, setlanguage] = useState('')
-    const [changemessages,setchangemessages]=useState([])
+    const [changemessages, setchangemessages] = useState([])
+    const [isLoggedIn, setisLoggedIn] = useState(false);
+
+
+
 
     return <Authcontext.Provider value={{
         setauthuser, authuser, selectedConversation,
         setselectedConversation, setmessages, messages,
-        setlanguage, language,setchangemessages,changemessages
+        setlanguage, language, setchangemessages, changemessages
+        ,setisLoggedIn,isLoggedIn
     }}>
         {children}
     </Authcontext.Provider>

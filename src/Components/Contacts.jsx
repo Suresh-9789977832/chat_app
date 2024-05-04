@@ -9,6 +9,7 @@ function Contacts({ data, index,loading}) {
     const isonline = onlineUsers.includes(data._id)
     const isSelected = selectedConversation?._id === data._id
 
+        console.log(onlineUsers)
     
         return <>
         {loading ? 
