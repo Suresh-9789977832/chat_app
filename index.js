@@ -17,7 +17,7 @@ app.use('/uploads', express.static(__dirname + '/uploads'))
 app.use(express.json())
 app.use(cookie_parser())
 app.use( cors({
-    origin: "http://localhost:8000",
+    origin: "https://chat-app-frontend-4ale.onrender.com",
     credentials:true
 }))
 
