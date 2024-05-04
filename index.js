@@ -12,13 +12,12 @@ const { app, server } = require("./Socket/Socket")
 
 const PORT = process.env.PORT || 6000
 
-const __dirname=path.resolve()
 
 app.use('/uploads', express.static(__dirname + '/uploads'))
 app.use(express.json())
 app.use(cookie_parser())
 app.use( cors({
-    origin: "http://localhost:5173",
+    origin: "http://localhost:8000",
     credentials:true
 }))
 
@@ -26,12 +25,11 @@ app.use( cors({
 app.use('/api/auth', authrouter)
 app.use('/api/message', messagerouter)
 app.use('/api/users',userRouter)
-app.use(express.static(path.join(__dirname,"/frontend/dist")))
 
 
-app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname,"frontend","dist","index.html"))
-})
+// app.get('*', (req, res) => {
+//     res.sendFile(path.join(__dirname,"frontend","dist","index.html"))
+// })
 
 
 server.listen(PORT, () => {
