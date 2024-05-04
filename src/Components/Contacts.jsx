@@ -23,7 +23,7 @@ function Contacts({ data, index,loading}) {
                 <div className={`flex gap-2  items-center hover:bg-red-500 rounded p-2 py-1 cursor-pointer ${isSelected ? "bg-red-500" : ""}`} onClick={() => setselectedConversation(data)} key={index}>
                     <div className={`avatar ${isonline ? "online" : ""}`} >
             <div className="w-12 rounded-full">
-                <img src={`http://localhost:8000/`+data.imageurl}  className=''/>
+                <img src={`https://chat-app-1-75f6.onrender.com/`+data.imageurl}  className=''/>
             </div>
             </div>
             <div className='flex flex-col flex-1'>
