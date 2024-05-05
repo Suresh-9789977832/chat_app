@@ -61,7 +61,7 @@ function Singup() {
 
 
   return <>
-   <div className='flex flex-col items-center justify-center min-w-96 mx-auto'>
+   <div className='flex flex-col items-center justify-center min-w-96 mx-auto max-mmedi:w-80 max-msmall:w-[290px]'>
       <div className=' p-4 h-full w-full bg-white-600 rounded-md bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-40  border-gray-100'>
         <h1 className=' text-3xl  font-semibold text-center text-gray-300'>Signup</h1>
         <form>
