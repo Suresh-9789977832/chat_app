@@ -4,6 +4,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import { env } from '../Components/env'
 import toast from 'react-hot-toast'
 import { Authcontext } from '../Context/Authcontext';
+import Spinner from '../Components/Spinner'
 
 function Login() {
   
@@ -61,7 +62,7 @@ function Login() {
           </Link>
 
           <div>
-            <button className='btn btn-block btr-sm mt-2  font-semibold text-lg' onClick={handlelogin}>Login</button>
+            <button className='btn btn-block btr-sm mt-2  font-semibold text-lg' onClick={handlelogin}>{loading?<Spinner/>:"" }Login</button>
           </div>
         </form>
        

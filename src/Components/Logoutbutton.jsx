@@ -15,7 +15,7 @@ function Logoutbutton() {
       if (res.status === 200) {
         localStorage.removeItem("value")
         setauthuser("")
-        setselectedConversation(null)
+        setselectedConversation(null) 
         navigate('/login')
       }
     } catch (error) {
