@@ -11,7 +11,6 @@ export const Socketcontextprovider = ({ children }) => {
     const { authuser,setisLoggedIn,isLoggedIn } = useContext(Authcontext)
 
 
-    console.log(authuser)
 
 
     useEffect(() => {
@@ -37,7 +36,6 @@ export const Socketcontextprovider = ({ children }) => {
     }, [authuser])
 
 
-console.log(onlineUsers)
 
     return <Socketcontext.Provider value={{socket,onlineUsers}}>
         {children}

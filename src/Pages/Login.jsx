@@ -11,7 +11,11 @@ function Login() {
   const [username, setusername] = useState('')
   const [password, setpassword] = useState('')
   const [loading,setloading]=useState(false)
-  const navigate=useNavigate()
+  const navigate = useNavigate()
+  const {setOpen,Open}=useContext(Authcontext)
+  
+  const handleOpen = () => setOpen(true);
+
 
   const {setauthuser,setisLoggedIn}=useContext(Authcontext)
 
@@ -39,7 +43,8 @@ function Login() {
   }
 
   
-  return (
+  return <>
+    <div className=' flex flex-col gap-2'>
     <div className='flex flex-col items-center justify-center w-96  max-mmedi:w-80 max-msmall:w-[290px] mx-auto'>
       <div className=' p-4 h-full w-full bg-white-600 rounded-md bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-40  border-gray-100'>
         <h1 className=' text-3xl  font-semibold text-center text-gray-300'>Login</h1>
@@ -61,14 +66,36 @@ function Login() {
             {"Don't"} have an account?
           </Link>
 
+         
+
           <div>
-            <button className='btn btn-block btr-sm mt-2  font-semibold text-lg' onClick={handlelogin}>{loading?<Spinner/>:"" }Login</button>
+            <button className='btn btn-block btr-sm mt-2  font-semibold text-lg' onClick={handlelogin}>{loading ? <Spinner /> : ""}Login</button>
           </div>
         </form>
-       
+
+      </div>
+    </div>
+    
+    <div className='flex flex-col items-center justify-center w-96  max-mmedi:w-80 max-msmall:w-[290px] mx-auto'>
+      <div className=' p-4 h-full w-full bg-white-600 rounded-md bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-40  border-gray-100'>
+        <div>
+        <h2>Demo-Username1:<span>Suresh</span></h2>  
+        <h2>Demo-Password1:<span>Suresh</span></h2>       
+        </div><br/>
+ 
+        <div>
+        <h2>Demo-Username2:<span>Ramesh</span></h2>  
+        <h2>Demo-Password2:<span>Ramesh</span></h2>       
+        </div>
+
       </div>
          </div>
-  )
+    </div>
+     
+  </>
+      
+
+  
 }
 
 export default Login
