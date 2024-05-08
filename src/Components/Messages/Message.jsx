@@ -15,7 +15,7 @@ function Message({ mess, index,newmsg}) {
         <div className={`chat ${chatname}`}>
             <div className='chat-image avatar'>
                 <div className='w-10 rounded-full'>
-                <img src={`https://chat-app-1-75f6.onrender.com/`+profilepic}/>
+                <img src={profilepic}/>
                 </div>
 
             </div>
