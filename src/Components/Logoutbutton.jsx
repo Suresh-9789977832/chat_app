@@ -13,7 +13,7 @@ function Logoutbutton() {
     try {
       let res = await axios.post(`${env.BASE_URL}/api/auth/logout`)
       if (res.status === 200) {
-        localStorage.removeItem("value")
+        sessionStorage.removeItem("value")
         setauthuser("")
         setselectedConversation(null) 
         navigate('/login')

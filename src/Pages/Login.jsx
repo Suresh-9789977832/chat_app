@@ -28,7 +28,7 @@ function Login() {
         setloading(false)
         setpassword("")
         setusername("")
-        localStorage.setItem('value', JSON.stringify(res.data))
+        sessionStorage.setItem('value', JSON.stringify(res.data))
         setauthuser(res.data)
         navigate('/')
         setisLoggedIn(true)

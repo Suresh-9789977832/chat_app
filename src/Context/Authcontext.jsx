@@ -6,7 +6,7 @@ export const Authcontext = createContext()
 export const AuthContextProvider = ({ children }) => {
     
 
-    const [authuser, setauthuser] = useState(JSON.parse(localStorage.getItem("value")) || null)
+    const [authuser, setauthuser] = useState(JSON.parse(sessionStorage.getItem("value")) || null)
     const [selectedConversation, setselectedConversation] = useState(null)
     const [messages, setmessages] = useState([])
     const [language, setlanguage] = useState('')
